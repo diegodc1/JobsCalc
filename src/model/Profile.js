@@ -4,7 +4,7 @@ module.exports = {
   async get() {
     const db = await Database()
 
-    const data = db.get(`SELECT * FROM profile`) //está pegando os dados de todos os campos da tabela/banco de dados profile (obs.: o get() trás apenas 1 objeto)
+    const data = await db.get(`SELECT * FROM profile`) //está pegando os dados de todos os campos da tabela/banco de dados profile (obs.: o get() trás apenas 1 objeto)
 
     await db.close()
 

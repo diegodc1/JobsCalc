@@ -33,7 +33,7 @@ module.exports = {
   },
 
   async delete(id) {
-    const db = Database();
+    const db = await Database();
 
     await db.run(`DELETE FROM jobs WHERE id = ${id}`) //exclui um job
 
